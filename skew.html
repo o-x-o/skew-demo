@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<base href="./cyberstar-static/" />
+<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="./css/base.css"/>
+<title>三宝供应链解决方案专家</title>
+<style>
+
+/*index-page*/
+.index-page,.fullpage-wrap,.section{
+	height:100%;
+}
+
+.index-page header{
+	background-color: rgba(255,255,255,0.3) !important;
+}
+
+.index-page .relative{
+	color:#fff;
+}
+.index-page .section div{
+	margin:.05rem auto;
+	line-height: .35rem;
+}
+.index-page .section .fp-tableCell{
+	margin:0;
+}
+.index-page .relative .top-50{
+	margin-top:-1.50rem;
+}
+.index-page .relative .btn{
+	width:4.80rem;
+	height:.80rem;
+	line-height:.80rem;
+	font-size:.30rem;
+	border-radius:.04rem;
+	background-color: #fff;
+	color: #666;
+}
+.index-page .relative .btn:hover{
+	background-color: #feaf41;
+	color: #fff;
+}
+.index-page .relative.text-center .absolute{
+	width:100%;
+}
+.index-page .relative.text-center .absolute img{
+	width:auto;
+	display:block;
+	max-width:90%;
+}
+.index-page .section{
+	width: 100%;
+}
+.index-page .toggle-img{
+	cursor: pointer;
+}
+
+.index-page .btn{
+	transition: background-color .5s, color .5s;
+}
+
+#skew-zone-wrap{
+	height:100%;width:100%;margin: 0 auto;position:relative;
+	float:left;
+}
+#skew-zone-wrap.loading{
+	opacity:0 !important;
+}
+#skew-zone-wrap .skew{
+	transform: skew(-13deg);
+}
+#skew-zone-wrap .unskew{
+	transform: skew(13deg);
+}
+#skew-zone-wrap .zone{
+	width:50%;height:100%;
+	transition:width .5s ease, left .5s ease;
+	overflow:hidden;
+	margin: 0 auto;
+	position: absolute;
+}
+#skew-zone-wrap #skew-zone-center{
+	width: 38%;
+	left: 31%;
+	z-index:2;
+	position: absolute;
+}
+#skew-zone-wrap .zone .background{
+	background-size: auto 100%;
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+	position: absolute;
+}
+#skew-zone-wrap #skew-zone-left{
+	left:0;
+}
+#skew-zone-wrap #skew-zone-right{
+	right:0
+}
+#skew-zone-wrap #skew-zone-left .background{
+	background-position-x: left;
+}
+#skew-zone-wrap #skew-zone-right .background{
+	background-position-x: right;
+}
+#skew-zone-wrap #skew-zone-center .background{
+	background-position-x: center;
+	width:200%;
+	left: -50%;
+}
+#skew-zone-wrap .zone .background>.shade{
+	width:100%;height:100%;margin: 0 auto;background-color:#000;transition:opacity .5s ease;
+}
+#skew-zone-wrap .zone .background>.shade.loading{
+	opacity:0 !important;
+}
+#skew-zone-wrap #skew-zone-left .background>.shade{
+	opacity:0.70;
+}
+#skew-zone-wrap #skew-zone-right .background>.shade{
+	opacity:0.37;
+}
+#skew-zone-wrap #skew-zone-center .background>.shade{
+	opacity:0.57;
+}
+#skew-zone-wrap .zone:hover .background>.shade{
+	opacity:0 !important;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-left{
+	width:68%;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-right{
+	width:32%;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center{
+	left:57%;
+	width:24%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-left{
+	width:33%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-right{
+	width:67%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-center{
+	left:21%;
+	width:24%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-left{
+	width:33%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-right{
+	width:67%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center{
+	left:21%;
+	width:60%;
+}
+#skew-zone-wrap .narrow,#skew-zone-wrap .wide{
+	display:none;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-left .wide,
+#skew-zone-wrap.skew-zone-center #skew-zone-center .wide,
+#skew-zone-wrap.skew-zone-right #skew-zone-right .wide,
+#skew-zone-wrap.skew-zone-left #skew-zone-center .narrow,
+#skew-zone-wrap.skew-zone-left #skew-zone-right .narrow,
+#skew-zone-wrap.skew-zone-center #skew-zone-left .narrow,
+#skew-zone-wrap.skew-zone-center #skew-zone-right .narrow,
+#skew-zone-wrap.skew-zone-right #skew-zone-left .narrow,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .narrow{
+	display:inline-block;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center .normal,
+#skew-zone-wrap.skew-zone-left #skew-zone-right .normal,
+#skew-zone-wrap.skew-zone-center #skew-zone-left .normal,
+#skew-zone-wrap.skew-zone-center #skew-zone-right .normal,
+#skew-zone-wrap.skew-zone-right #skew-zone-left .normal,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .normal{
+	display:none;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center .narrow-right,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .narrow-right{
+	margin-right:-0.20rem;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center .text-right{
+	float:right;
+	margin-right:1.00rem;
+}
+#skew-zone-wrap #skew-zone-center .top-50{
+	margin-top:-0.50rem;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center .top-50{
+	margin-top:-1.50rem;
+}
+
+#skew-zone-wrap .zone .btn{
+	width: 3.00rem;
+    font-size: .24rem;
+    margin-right: .20rem;
+    transform: skew(-13deg);
+}
+</style>
+<script>
+;(function(global){
+
+	var originWidth=window.ORIGIN_WIDTH||1680,
+	    minWidth=window.MIN_WIDTH||800,
+	    maxWidth=window.MAX_WIDTH||1680;
+	function resize(){
+	  function GetRoot(){return document.documentElement||document.body.parentElement;}
+	  function WinWidth(){return window.innerWidth||GetRoot().clientWidth;}
+	  var ratio=WinWidth()/originWidth;
+	  if(WinWidth()<=minWidth)GetRoot().style.fontSize=minWidth/originWidth*100+"px";
+	  else if(WinWidth()<=maxWidth)GetRoot().style.fontSize=ratio*100+"px";
+	  else GetRoot().style.fontSize=maxWidth/originWidth*100+"px";
+	  GetRoot().style.opacity=1;
+	}
+	function scroll(){
+	  if((window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop)==0){
+	    document.getElementsByTagName("header")[0].style.backgroundColor="rgba(255,255,255,0.7)";
+	  }else{
+	    document.getElementsByTagName("header")[0].style.backgroundColor="rgba(255,255,255,1)";
+	  }
+	}
+	if(window.jQuery){
+		$(resize);
+		$(window).load(resize);
+		$(window).resize(resize);
+		$(window).scroll(scroll);
+	}else{
+		document.addEventListener('DOMContentLoaded', resize, false);
+		onresize=onload=resize;
+		onscroll=scroll;
+	}
+
+})(window);
+</script>
+</head>
+<body>
+
+<div class="index-page">
+
+	<header class="fixed transparent om-1680" style="display:none;">
+	    <div class="wrap om-1680 clearfix">
+	      <a href="javascript:;" class="logo left"><img src="./img/logo.png"/></a>
+	      <div class="right">
+	        <span class="collapsable">
+				<a href="javascript:;" lang class="menu cur">首页</a>
+				<a href="javascript:;" lang class="menu">物流</a>
+				<a href="javascript:;" lang class="menu">基础服务</a>
+				<a href="javascript:;" lang class="menu">海外仓</a>
+	        </span>
+	          <a class="menu user" lang href="javascript:;"><img src="./img/profile.png"/><img src="./img/profilex.png"/>
+	           	<span class="ml-10p">LOGIN</span>/<span>REGISTER</span>
+	          </a>
+	      </div>
+	    </div>
+	</header>
+
+	<div class="fullpage-wrap">
+		
+		<div class="section relative bg-cover response-img" style="background-color:#ccc;">
+			<div id="skew-zone-wrap" class="clearfix loading">
+				<div class="zone left" id="skew-zone-left">
+					<div class="background" style="background-image:url(./img/index/bg5-1.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<div class="absolute top-200p left-100p animated ani-500" style="display:none;">
+						<div class="inline-block">
+							<div>
+								<img src="./img/index/zone-left-1.png"/>
+							</div>
+							<div class="inline-block normal">
+								<img src="./img/index/zone-left-2.png"/>
+							</div>
+							<div class="narrow">
+								<img src="./img/index/zone-left-2-1.png"/>
+							</div>
+							<br/>
+							<div class="narrow">
+								<img src="./img/index/zone-left-2-2.png"/>
+							</div>
+							<div class="wide">
+								<img src="./img/index/zone-left-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zone skew" id="skew-zone-center">
+					<div class="background unskew" style="background-image:url(./img/index/bg5-2.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<center class="absolute w-100 top-50 animated ani-500" style="display:none;">
+						<div class="inline-block text-right unskew">
+							<div class="inline-block narrow-right">
+								<img src="./img/index/zone-center-1.png"/>
+							</div>
+							<br/>
+							<div class="inline-block normal">
+								<img src="./img/index/zone-center-2.png"/>
+							</div>
+							<div class="narrow">
+								<img src="./img/index/zone-center-2-1.png" style="margin-right: -0.1rem;"/>
+							</div>
+							<br/>
+							<div class="narrow">
+								<img src="./img/index/zone-center-2-2.png"/>
+							</div>
+							<div class="wide">
+								<img src="./img/index/zone-center-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+							<br/>
+						</div>
+					</center>
+				</div>
+				<div class="zone right" id="skew-zone-right">
+					<div class="background" style="background-image:url(./img/index/bg5-3.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<div class="absolute bottom-150p right-100p animated ani-500" style="display:none;">
+						<div class="inline-block text-right">
+							<div class="inline-block">
+								<img src="./img/index/zone-right-1.png"/>
+							</div>
+							<br/>
+							<div class="inline-block">
+								<img src="./img/index/zone-right-2.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<img src="./img/index/zone-right-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+
+</body>
+<link rel="stylesheet" href="./css/animate.css"/>
+<script src="./js/jquery-1.12.0.min.js"></script>
+
+<script>
+
+$(function(){
+
+	jQuery.fn.extend({
+
+		/* 图片加载回调 */
+		loadCall : function(fn){
+			var dfs=[];
+			this.each(function(){
+				var dfd=$.Deferred();
+				$(this).bind('load',function(){
+					dfd.resolve();
+				}).bind('error',function(){
+					dfd.resolve();
+				});
+				if(this.complete)setTimeout(function(){
+					dfd.resolve();
+				},100);
+				dfs.push(dfd);
+			});
+			$.when.apply($,dfs).done(fn.bind(this));
+		}
+
+	});
+	
+	$(".response-img img").loadCall(function(){
+		this.each(function(){
+			if($(this).is(".btns-group img")){
+				$(this).width(this.naturalWidth/110+"rem");
+			}else{
+				$(this).width(this.naturalWidth/100+"rem");
+			}
+		});
+		console.info("Cyberstar");
+
+		$("#skew-zone-wrap").add("#skew-zone-wrap .zone .background>.shade").removeClass("loading");
+
+		function sectionAnimate(i, n, className){
+			$(".section").eq(i-1).find(".animated").eq(n).show().addClass(className);
+		}
+		sectionAnimate(1, 0, "animate-fadeInLeft");
+		sectionAnimate(1, 1, "animate-fadeInDown");
+		sectionAnimate(1, 2, "animate-fadeInRight");
+		
+		function animateAgain($dom, name){
+			$dom.hide().removeClass(function(i,classes){
+				classes=classes.match(/animate-.*\s?/gm);
+				return classes && classes.join("");
+			});
+			setTimeout(function(){
+				$dom.addClass("animate-"+name).show();
+			},1);
+		}
+		$("#skew-zone-wrap>.zone").hover(function(){
+			$("#skew-zone-wrap").addClass(this.id);
+			animateAgain($(this).find(".animated"),$(this).index()==0?"fadeInLeft":"fadeInRight");
+		},function(){
+			$("#skew-zone-wrap").removeClass(this.id);
+			animateAgain($(this).find(".animated"),"fadeIn");
+		});
+		
+		$("header").fadeIn(500);
+		$("header").addClass("transparent");
+		$("header .menu.user").addClass("toggle-img");
+		$("header").animate({
+			"margin-top":0,
+			height:"show",
+			opacity:1,
+		},1000);
+	});
+
+});
+</script>
+</html>

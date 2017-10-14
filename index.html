@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<base href="./cyberstar-static/" />
+<meta name="keywords" content="海外包,跨境服务,物流成本,到货时效,国际运输,仓库销货,三宝科技,跟踪货物,FBA,仓库,WMS,仓库管理,通关服务,海关,快速退税"/>
+<meta name="description" content="三宝链式是三宝科技旗下专业从事跨境供应链服务的公司，我们与北美有45年历史的供应链服务龙头企业Navegate独家合作，建立以“立足北美，链通全球”的企业理念，以围绕“海外仓储”特色服务为核心，通过整合国际运输资源、口岸清关、海外仓配服务、海外营销策略等优势资源，致力为全球中小跨境电子商务企业、外贸出口企业提供仓配一体的物流解决方案和服务。"/>
+<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="./css/base.css"/>
+<title>三宝供应链解决方案专家</title>
+<style>
+
+/*index-page*/
+.index-page header{
+	background-color: #fff;
+}
+
+.index-page .relative{
+	color:#fff;
+}
+.index-page .section div{
+	margin:.05rem auto;
+	line-height: .35rem;
+}
+.index-page .section .fp-tableCell{
+	margin:0;
+}
+.index-page .relative .top-50{
+	margin-top:-1.50rem;
+}
+.index-page .relative .btn{
+	width:4.80rem;
+	height:.80rem;
+	line-height:.80rem;
+	font-size:.30rem;
+	border-radius:.04rem;
+	background-color: #fff;
+	color: #666;
+}
+.index-page .relative .btn:hover{
+	background-color: #feaf41;
+	color: #fff;
+}
+.index-page .relative.text-center .absolute{
+	width:100%;
+}
+.index-page .relative.text-center .absolute img{
+	width:auto;
+	display:block;
+	max-width:90%;
+}
+.index-page .section{
+	width: 100%;
+}
+.index-page .section:last-child{
+	transition: background-position 2s;
+}
+.index-page .section.show-footer{
+	background-position: center -.60rem;
+}
+.index-page .section:last-child .btns-group{
+	width:65%;
+	top:50%;
+	margin-top: -3.10rem;
+}
+.index-page .section:last-child .btns-group>a{
+	display: block;
+}
+.index-page .section:last-child .right-40{
+	right:40%;
+}
+.index-page .section:last-child .right-35{
+	right:32%;
+}
+.index-page .section:last-child .right-30{
+	right:24%;
+}
+.index-page .section:last-child .right-25{
+	right:16%;
+}
+.index-page .section:last-child .right-20{
+	right:8%;
+}
+.index-page .section:last-child .h3{
+	width:6.00rem;
+	text-align: left;
+	position: relative;
+	display: inline-block;
+}
+.index-page .section:last-child .animated {
+	text-align: right;
+}
+.index-page .section:last-child .animated img{
+	width: auto;
+	position: relative;
+}
+.index-page .toggle-img{
+	cursor: pointer;
+}
+.index-page .arrow-down img{
+	width:auto;
+	cursor: pointer;
+}
+.index-page .arrow-down{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index:10;
+	height: 0;
+	bottom: 6%;
+	overflow: visible;
+}
+
+.index-page .btn{
+	transition: background-color .5s, color .5s;
+}
+.index-page .section:last-child .btns-group{
+	left:33%;
+}
+
+#skew-zone-wrap{
+	height:100%;width:100%;margin: 0 auto;position:relative;
+	float:left;
+}
+#skew-zone-wrap.loading{
+	opacity:0 !important;
+}
+#skew-zone-wrap .skew{
+	transform: skew(-13deg);
+}
+#skew-zone-wrap .unskew{
+	transform: skew(13deg);
+}
+#skew-zone-wrap .zone{
+	width:50%;height:100%;
+	transition:width .5s ease, left .5s ease;
+	overflow:hidden;
+	margin: 0 auto;
+	position: absolute;
+}
+#skew-zone-wrap #skew-zone-center{
+	width: 38%;
+	left: 31%;
+	z-index:2;
+	position: absolute;
+}
+#skew-zone-wrap .zone .background{
+	background-size: auto 100%;
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+	position: absolute;
+}
+#skew-zone-wrap #skew-zone-left{
+	left:0;
+}
+#skew-zone-wrap #skew-zone-right{
+	right:0
+}
+#skew-zone-wrap #skew-zone-left .background{
+	background-position-x: left;
+}
+#skew-zone-wrap #skew-zone-right .background{
+	background-position-x: right;
+}
+#skew-zone-wrap #skew-zone-center .background{
+	background-position-x: center;
+	width:200%;
+	left: -50%;
+}
+#skew-zone-wrap .zone .background>.shade{
+	width:100%;height:100%;margin: 0 auto;background-color:#000;transition:opacity .5s ease;
+}
+#skew-zone-wrap .zone .background>.shade.loading{
+	opacity:0 !important;
+}
+#skew-zone-wrap #skew-zone-left .background>.shade{
+	opacity:0.70;
+}
+#skew-zone-wrap #skew-zone-right .background>.shade{
+	opacity:0.37;
+}
+#skew-zone-wrap #skew-zone-center .background>.shade{
+	opacity:0.57;
+}
+#skew-zone-wrap .zone:hover .background>.shade{
+	opacity:0 !important;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-left{
+	width:68%;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-right{
+	width:32%;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center{
+	left:57%;
+	width:24%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-left{
+	width:33%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-right{
+	width:67%;
+}
+#skew-zone-wrap.skew-zone-right #skew-zone-center{
+	left:21%;
+	width:24%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-left{
+	width:33%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-right{
+	width:67%;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center{
+	left:21%;
+	width:60%;
+}
+#skew-zone-wrap .narrow,#skew-zone-wrap .wide{
+	display:none;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-left .wide,
+#skew-zone-wrap.skew-zone-center #skew-zone-center .wide,
+#skew-zone-wrap.skew-zone-right #skew-zone-right .wide,
+#skew-zone-wrap.skew-zone-left #skew-zone-center .narrow,
+#skew-zone-wrap.skew-zone-left #skew-zone-right .narrow,
+#skew-zone-wrap.skew-zone-center #skew-zone-left .narrow,
+#skew-zone-wrap.skew-zone-center #skew-zone-right .narrow,
+#skew-zone-wrap.skew-zone-right #skew-zone-left .narrow,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .narrow{
+	display:inline-block;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center .normal,
+#skew-zone-wrap.skew-zone-left #skew-zone-right .normal,
+#skew-zone-wrap.skew-zone-center #skew-zone-left .normal,
+#skew-zone-wrap.skew-zone-center #skew-zone-right .normal,
+#skew-zone-wrap.skew-zone-right #skew-zone-left .normal,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .normal{
+	display:none;
+}
+#skew-zone-wrap.skew-zone-left #skew-zone-center .narrow-right,
+#skew-zone-wrap.skew-zone-right #skew-zone-center .narrow-right{
+	margin-right:-0.20rem;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center .text-right{
+	float:right;
+	margin-right:1.00rem;
+}
+#skew-zone-wrap #skew-zone-center .top-50{
+	margin-top:-0.50rem;
+}
+#skew-zone-wrap.skew-zone-center #skew-zone-center .top-50{
+	margin-top:-1.50rem;
+}
+
+#skew-zone-wrap .zone .btn{
+	width: 3.00rem;
+    font-size: .24rem;
+    margin-right: .20rem;
+    transform: skew(-13deg);
+}
+</style>
+<script>
+;(function(global){
+
+	var originWidth=window.ORIGIN_WIDTH||1680,
+	    minWidth=window.MIN_WIDTH||800,
+	    maxWidth=window.MAX_WIDTH||1680;
+	function resize(){
+	  function GetRoot(){return document.documentElement||document.body.parentElement;}
+	  function WinWidth(){return window.innerWidth||GetRoot().clientWidth;}
+	  var ratio=WinWidth()/originWidth;
+	  if(WinWidth()<=minWidth)GetRoot().style.fontSize=minWidth/originWidth*100+"px";
+	  else if(WinWidth()<=maxWidth)GetRoot().style.fontSize=ratio*100+"px";
+	  else GetRoot().style.fontSize=maxWidth/originWidth*100+"px";
+	  GetRoot().style.opacity=1;
+	}
+	function scroll(){
+	  if((window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop)==0){
+	    document.getElementsByTagName("header")[0].style.backgroundColor="rgba(255,255,255,0.7)";
+	  }else{
+	    document.getElementsByTagName("header")[0].style.backgroundColor="rgba(255,255,255,1)";
+	  }
+	}
+	if(window.jQuery){
+		$(resize);
+		$(window).load(resize);
+		$(window).resize(resize);
+		$(window).scroll(scroll);
+	}else{
+		document.addEventListener('DOMContentLoaded', resize, false);
+		onresize=onload=resize;
+		onscroll=scroll;
+	}
+
+})(window);
+</script>
+</head>
+<body>
+
+<div class="index-page">
+
+	<header class="fixed transparent om-1680" style="display:none;">
+	    <div class="wrap om-1680 clearfix">
+	      <a href="javascript:;" class="logo left"><img src="./img/logo.png"/></a>
+	      <div class="right">
+	        <span class="collapsable">
+				<a href="javascript:;" lang class="menu cur">首页</a>
+				<a href="javascript:;" lang class="menu">物流</a>
+				<a href="javascript:;" lang class="menu">基础服务</a>
+				<a href="javascript:;" lang class="menu">海外仓</a>
+	        </span>
+	          <a class="menu user" lang href="javascript:;"><img src="./img/profile.png"/><img src="./img/profilex.png"/>
+	           	<span class="ml-10p">LOGIN</span>/<span>REGISTER</span>
+	          </a>
+	      </div>
+	    </div>
+	</header>
+
+	<div class="fullpage-wrap">
+	
+		<div class="section relative text-center bg-cover response-img" style="background-image:url(./img/index/bg11.jpg);">
+			<div class="absolute top-20">
+				<img src="./img/index/text-1-1r.png" class="animated ani-500" style="display:none;"/>
+				<img src="./img/index/text-1-2r.png" class="animated ani-500 mt-20p" style="display:none;"/>
+				<img src="./img/index/text-1-3r.png" class="animated ani-500 mt-10p" style="display:none;"/>
+			</div>
+			<div class="absolute bottom-10">
+				<img src="./img/index/text-1-4.png" class="animated ani-500" style="display:none;"/>
+			</div>
+			<center class="arrow-down">
+				<img src="./img/arrow-down.png" class="animated infinite animate-bump"/>
+			</center>
+		</div>
+		
+		<div class="section relative bg-cover response-img" style="background-color:#ccc;">
+			<div id="skew-zone-wrap" class="clearfix loading">
+				<div class="zone left" id="skew-zone-left">
+					<div class="background" style="background-image:url(./img/index/bg5-1.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<div class="absolute top-200p left-100p animated ani-500" style="display:none;">
+						<div class="inline-block">
+							<div>
+								<img src="./img/index/zone-left-1.png"/>
+							</div>
+							<div class="inline-block normal">
+								<img src="./img/index/zone-left-2.png"/>
+							</div>
+							<div class="narrow">
+								<img src="./img/index/zone-left-2-1.png"/>
+							</div>
+							<br/>
+							<div class="narrow">
+								<img src="./img/index/zone-left-2-2.png"/>
+							</div>
+							<div class="wide">
+								<img src="./img/index/zone-left-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zone skew" id="skew-zone-center">
+					<div class="background unskew" style="background-image:url(./img/index/bg5-2.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<center class="absolute w-100 top-50 animated ani-500" style="display:none;">
+						<div class="inline-block text-right unskew">
+							<div class="inline-block narrow-right">
+								<img src="./img/index/zone-center-1.png"/>
+							</div>
+							<br/>
+							<div class="inline-block normal">
+								<img src="./img/index/zone-center-2.png"/>
+							</div>
+							<div class="narrow">
+								<img src="./img/index/zone-center-2-1.png" style="margin-right: -0.1rem;"/>
+							</div>
+							<br/>
+							<div class="narrow">
+								<img src="./img/index/zone-center-2-2.png"/>
+							</div>
+							<div class="wide">
+								<img src="./img/index/zone-center-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+							<br/>
+						</div>
+					</center>
+				</div>
+				<div class="zone right" id="skew-zone-right">
+					<div class="background" style="background-image:url(./img/index/bg5-3.jpg);">
+						<div class="shade loading"></div>
+					</div>
+					<div class="absolute bottom-150p right-100p animated ani-500" style="display:none;">
+						<div class="inline-block text-right">
+							<div class="inline-block">
+								<img src="./img/index/zone-right-1.png"/>
+							</div>
+							<br/>
+							<div class="inline-block">
+								<img src="./img/index/zone-right-2.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<img src="./img/index/zone-right-3.png"/>
+							</div>
+							<br/>
+							<div class="wide">
+								<a href="javascript:;" class="btn">查看详情</a>
+							</div>
+							<br/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<center class="arrow-down">
+				<img src="./img/arrow-down.png" class="animated infinite animate-bump"/>
+			</center>
+		</div>
+		
+		<div class="section relative bg-cover response-img" style="background-image:url(./img/index/bg2.jpg);">
+			<div class="absolute top-50 left-10 animated ani-500" style="display:none;">
+				<div class="h3">物流</div>
+				<div class="inline-block"><img src="./img/index/text-2.png"/></div>
+				<div class="h4">LOW COST GLOBAL INTELLIGENCE</div>
+				<div class="h4">MANAGEMENT</div>
+				<a href="javascript:;" class="btn">更多</a>
+			</div>
+			<center class="arrow-down">
+				<img src="./img/arrow-down.png" class="animated infinite animate-bump"/>
+			</center>
+		</div>
+		
+		<div class="section relative bg-cover response-img" style="background-image:url(./img/index/bg3.jpg);">
+			<div class="absolute bottom-10 right-10 animated ani-500 text-right" style="display:none;">
+				<div class="h3">海外仓</div>
+				<div class="inline-block"><img src="./img/index/text-3.png"/></div>
+				<div class="h4">RETURN AND EXCHANGE</div>
+				<div class="h4">U.S.A CUSTOMER CENTE</div>
+				<div class="h4">UNSALABLE SALES</div>
+				<div class="h4">FBA SEAMLESS CONNECTION</div>
+				<a href="javascript:;" class="btn">立即申请</a>
+			</div>
+			<center class="arrow-down">
+				<img src="./img/arrow-down.png" class="animated infinite animate-bump"/>
+			</center>
+		</div>
+		
+		<div class="section relative bg-cover show-footer response-img" style="background-image:url(./img/index/bg5.jpg);">
+			<div class="absolute left-30 btns-group">
+				<div class="animated ani-500" style="display:none;"><p class="h3 color-black right-40">跨境电商综合服务</p></div>
+				<div class="animated ani-500" style="display:none;"><img src="./img/index/text-5.png" class="mt-5p right-40"/></div>
+				<!-- <a href="javascript:;" class="animated ani-500" style="display:none;cursor:default;"><img src="./img/index/link-button-1o.png" class="mt-40p right-35"/></a> -->
+				<a href="javascript:;" class="animated ani-500 toggle-img" style="display:none;"><img src="./img/index/link-button-5.png" class="mt-40p right-35"/><img src="./img/index/link-button-5x.png" class="mt-40p right-35"/></a>
+				<a href="javascript:;" class="animated ani-500 toggle-img" style="display:none;"><img src="./img/index/link-button-3.png" class="mt-10p right-30"/><img src="./img/index/link-button-3x.png" class="mt-10p right-30"/></a>
+				<a href="javascript:;" class="animated ani-500 toggle-img" style="display:none;"><img src="./img/index/link-button-4.png" class="mt-10p right-25"/><img src="./img/index/link-button-4x.png" class="mt-10p right-25"/></a>
+			</div>
+			<footer class="absolute om-1680">
+				<center class="em color-gray9" style="display:none;">友情链接:<a href="https://m.kuaidi100.com/" target="_blank" class="toggle-img"><img src="./img/kuaidi100.png"/><img src="./img/kuaidi100x.png"/></a></center>
+				<center class="em color-white">版权所有-苏ICP备1021234567号-3 -- 由三宝链式提供技术支持</center>
+			</footer>
+		</div>
+	</div>
+
+</div>
+
+</body>
+<link rel="stylesheet" href="./css/animate.css"/>
+<script src="./js/jquery-1.12.0.min.js"></script>
+<script src="./plugin/jquery.fullPage/jquery.fullPage.min.js"></script>
+
+<script>
+
+$(function(){
+
+	function sectionAnimate(i, n, className){
+		$(".section").eq(i-1).find(".animated").eq(n).show().addClass(className);
+	}
+
+	$(".index-page .fullpage-wrap").fullpage({
+		navigation: false,
+		lockAnchors: true,
+		anchors:["one", "two", "three", "four", "five"],
+		autoScrolling: true,
+		easing:"",
+		scrollOverflow:true,
+		css3: true,
+		onLeave:function(i, next, direction){
+			$(".animated").not(".infinite").fadeOut();
+			$("header").stop(true).animate({
+				//"margin-top":"-.80rem",
+				//height:"hide",
+				//opacity:0,
+			},0);
+			if(next==1){
+				$("header").addClass("transparent");
+			}else{
+				$("header").removeClass("transparent");
+			}
+			if(i==5){
+				$.fn.fullpage.setAutoScrolling(true);
+			}
+		},
+		afterLoad:function(anchorLink, i){
+			
+			$("header").animate({
+				"margin-top":0,
+				height:"show",
+				opacity:1,
+			},this.over!=true&&i==6?4000:1000);
+			if(i==1){
+				$("header .menu.user").addClass("toggle-img");
+				firstAnimate(1);
+			}else{
+				$("header .menu.user").removeClass("toggle-img");
+			}
+			if(i==2){
+				sectionAnimate(i, 0, "animate-fadeInLeft");
+				sectionAnimate(i, 1, "animate-fadeInDown");
+				sectionAnimate(i, 2, "animate-fadeInRight");
+			}
+			if(i==3){
+				sectionAnimate(i, 0, "animate-fadeInLeft");
+			}
+			if(i==4){
+				sectionAnimate(i, 0, "animate-fadeInRight");
+			}
+			if(i==5){
+				this.over=true;
+				sectionAnimate(i, 0, "animate-fadeInRight");
+				sectionAnimate(i, 1, "animate-fadeInRight");
+				setTimeout(function(){
+					sectionAnimate(i, 2, "animate-fadeInRight");
+				},100);
+				setTimeout(function(){
+					sectionAnimate(i, 3, "animate-fadeInRight");
+				},200);
+				setTimeout(function(){
+					sectionAnimate(i, 4, "animate-fadeInRight");
+				},300);
+				setTimeout(function(){
+					sectionAnimate(i, 5, "animate-fadeInRight");
+				},400);
+				setTimeout(function(){
+					//sectionAnimate(i, 6, "animate-fadeInUp");
+					//$(".section:last-child").addClass("show-footer");
+				},500);
+			}
+		}
+	});
+
+	function firstAnimate(i){
+		sectionAnimate(i, 0, "animate-fadeInLeft");
+		sectionAnimate(i, 1, "animate-fadeInRight");
+		sectionAnimate(i, 2, "animate-fadeInRight");
+		sectionAnimate(i, 3, "animate-fadeInDown");
+	}
+	
+	$("header .menu.user").addClass("toggle-img");
+
+	$(".index-page  .arrow-down img").each(function(i){
+		$(this).click(function(){
+			$.fn.fullpage.moveSectionDown();
+		});
+	});
+	
+	function animateAgain($dom, name){
+		$dom.hide().removeClass(function(i,classes){
+			classes=classes.match(/animate-.*\s?/gm);
+			return classes && classes.join("");
+		});
+		setTimeout(function(){
+			$dom.addClass("animate-"+name).show();
+		},1);
+	}
+	
+	$("#skew-zone-wrap>.zone").hover(function(){
+		$("#skew-zone-wrap").addClass(this.id);
+		animateAgain($(this).find(".animated"),$(this).index()==0?"fadeInLeft":"fadeInRight");
+	},function(){
+		$("#skew-zone-wrap").removeClass(this.id);
+		animateAgain($(this).find(".animated"),"fadeIn");
+	});
+	
+	jQuery.fn.extend({
+
+		/* 图片加载回调 */
+		loadCall : function(fn){
+			var dfs=[];
+			this.each(function(){
+				var dfd=$.Deferred();
+				$(this).bind('load',function(){
+					dfd.resolve();
+				}).bind('error',function(){
+					dfd.resolve();
+				});
+				if(this.complete)setTimeout(function(){
+					dfd.resolve();
+				},100);
+				dfs.push(dfd);
+			});
+			$.when.apply($,dfs).done(fn.bind(this));
+		}
+
+	});
+	
+	$(".response-img img").loadCall(function(){
+		this.each(function(){
+			if($(this).is(".btns-group img")){
+				$(this).width(this.naturalWidth/110+"rem");
+			}else{
+				$(this).width(this.naturalWidth/100+"rem");
+			}
+		});
+		console.info("Cyberstar");
+		$("#skew-zone-wrap").add("#skew-zone-wrap .zone .background>.shade").removeClass("loading");
+		firstAnimate(1);
+		$("header").fadeIn(500);
+	});
+
+});
+</script>
+</html>
